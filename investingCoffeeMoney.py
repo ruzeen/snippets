@@ -1,6 +1,4 @@
-'''
-This function calculates how much $ you'll have in X years, if you invest your coffee money (save and invest weekly)
-'''
+# This function calculates how much $ you'll have in X years, if you invest your coffee money (save and invest weekly)
 
 def investingCoffeeMoney(coffee_price, times_per_week, num_years, cagr):
   cagr_val = (100+cagr)/100
