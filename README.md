@@ -1,1 +1,1 @@
-# Python snippets and fun stuff.
+# Python snippets and algorithms.
