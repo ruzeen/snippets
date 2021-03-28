@@ -3,7 +3,7 @@ def investingCoffeeMoney(coffee_price, times_per_week, num_years, cagr):
   yearly_spend = coffee_price*times_per_week*52
   start = yearly_spend*cagr_val
 
-  for i in range(1,num_years+1):
+  for i in range(num_years+1):
     if i > 1:
       next = (start + yearly_spend)*cagr_val
       start = next
