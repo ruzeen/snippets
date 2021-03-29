@@ -11,7 +11,7 @@ cagr = 15
 
 def investingCoffeeMoney(coffee_price, times_per_week, num_years, cagr):
   cagr_val = (100+cagr)/100
-  yearly_spend = coffee_price*times_per_week*52
+  yearly_spend = coffee_price*times_per_week*(365/7)
   start = yearly_spend*cagr_val
 
   for i in range(num_years+1):
