@@ -1,25 +1,23 @@
-# This function calculates how much $ you'll have in X years, if you invest your coffee money (save and invest weekly)
+# This function calculates how much $ you'll have in X years, if you invest weekly.
 
-# How much do you pay for a cup of coffee?
-coffee_price = 2.50
-# How many times per week do you buy coffee?
-times_per_week = 5
-# How many years can you go without buying coffee? :D
-num_years = 5
+# How much are you investing per week?
+weekly_in = 100
+# How many years do you plan on investing for?
+num_years = 10
 # Compound Annual Growth Rate (ROI %)
 cagr = 15
 
-def investing(coffee_price, times_per_week, num_years, cagr):
-  cagr_val = (100+cagr)/100
-  yearly_spend = coffee_price*times_per_week*(365/7)
-  start = yearly_spend*cagr_val
+def investing(weekly_in, num_years, cagr):
+  cagr = (100+cagr)/100
+  yearly_in = weekly_in*(365/7)
+  start = yearly_in*cagr
 
   for i in range(num_years+1):
     if i > 1:
-      next = (start + yearly_spend)*cagr_val
+      next = (start + yearly_in)*cagr
       start = next
       if i == num_years:
         savings = round(next,2)
-        print('You will have',savings,'if you invest your coffee $ for %s years.'%i)
+        print('You will have',savings,'if you invest',weekly_in,'/week for %s years.'%i)
 
-investing(coffee_price, times_per_week, num_years, cagr)
+investing(weekly_in, num_years, cagr)
