@@ -9,7 +9,7 @@ num_years = 5
 # Compound Annual Growth Rate (ROI %)
 cagr = 15
 
-def investingCoffeeMoney(coffee_price, times_per_week, num_years, cagr):
+def investing(coffee_price, times_per_week, num_years, cagr):
   cagr_val = (100+cagr)/100
   yearly_spend = coffee_price*times_per_week*(365/7)
   start = yearly_spend*cagr_val
@@ -22,4 +22,4 @@ def investingCoffeeMoney(coffee_price, times_per_week, num_years, cagr):
         savings = round(next,2)
         print('You will have',savings,'if you invest your coffee $ for %s years.'%i)
 
-investingCoffeeMoney(coffee_price, times_per_week, num_years, cagr)
+investing(coffee_price, times_per_week, num_years, cagr)
