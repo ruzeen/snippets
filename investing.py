@@ -17,7 +17,7 @@ def investing(weekly_in, num_years, cagr):
       next = (start + yearly_in)*cagr
       start = next
       if i == num_years:
-        savings = round(next,2)
+        savings = "%.2f" % round(next,2)
         print('You will have',savings,'if you invest',weekly_in,'/week for %s years.'%i)
 
 investing(weekly_in, num_years, cagr)
