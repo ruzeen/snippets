@@ -13,7 +13,7 @@ def collatz(n):
         steps += 1
       else:
         n = (n*3) + 1
+        steps += 1
         n/=2
-        for i in range(2):
-          steps += 1
+        steps += 1
     return steps
